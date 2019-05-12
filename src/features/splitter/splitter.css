@@ -8,6 +8,19 @@
   overflow: scroll;
 }
 
+.img {
+  position: absolute;
+  box-sizing: border-box;
+  border-radius: 32px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  user-select: none;
+  -webkit-user-select: none;
+  overflow: hidden;
+}
+
 .blockHigh {
   padding: 24px;
   box-sizing: border-box;
@@ -20,12 +33,8 @@
 }
 
 .wrapper {
-  height: 2000px;
+  height: 2400px;
   position: relative;
-}
-
-.main {
-  position: absolute;
 }
 
 .header {
