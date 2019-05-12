@@ -1,0 +1,38 @@
+.block {
+  padding: 24px;
+  box-sizing: border-box;
+  border-radius: 32px;
+  background-color: #fbf6e9;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+.blockHigh {
+  padding: 24px;
+  box-sizing: border-box;
+  border-radius: 32px;
+  background-color: #fbf6e9;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  bottom: 0;
+}
+
+.wrapper {
+  height: 2000px;
+  position: relative;
+}
+
+.main {
+  position: absolute;
+}
+
+.header {
+  font-size: 56px;
+  line-height: 52px;
+}
+
+.feedback {
+  text-align: center;
+}
