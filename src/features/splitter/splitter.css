@@ -33,15 +33,11 @@
 }
 
 .wrapper {
-  height: 2400px;
+  height: 3680px;
   position: relative;
 }
 
 .header {
   font-size: 56px;
   line-height: 52px;
-}
-
-.feedback {
-  text-align: center;
 }

@@ -7,14 +7,15 @@ import tester from "./tester.jpg";
 import master from "./master.jpg";
 import grinder from "./grinder.jpg";
 import motors from "./motors.jpg";
+import Feedback from "../feedback";
 
 const Splitter = () => (
   <div className="wrapper">
-    <SplitterLayout vertical secondaryInitialSize={1400}>
-      <SplitterLayout secondaryInitialSize={900}>
-        <SplitterLayout vertical secondaryInitialSize={200} primaryIndex={1}>
+    <SplitterLayout percentage vertical secondaryInitialSize={67}>
+      <SplitterLayout percentage secondaryInitialSize={60}>
+        <SplitterLayout percentage vertical secondaryInitialSize={57}>
           <div className="block header">РЕМОНТИРУЕМ ИНСТРУМЕНТЫ И ТЕХНИКУ</div>
-          <SplitterLayout vertical secondaryInitialSize={450}>
+          <SplitterLayout percentage vertical secondaryInitialSize={40}>
             <div className="block">Карта</div>
             <div className="block">
               Вологда, улица Можайского, 44 <br />
@@ -30,16 +31,20 @@ const Splitter = () => (
           </SplitterLayout>
         </SplitterLayout>
 
-        <SplitterLayout vertical secondaryInitialSize={600}>
-          <SplitterLayout secondaryInitialSize={200} vertical>
-            <SplitterLayout secondaryInitialSize={200}>
+        <SplitterLayout percentage vertical secondaryInitialSize={57}>
+          <SplitterLayout percentage vertical secondaryInitialSize={50}>
+            <SplitterLayout
+              percentage
+              secondaryInitialSize={44}
+              primaryIndex={1}
+            >
               <div className="block">
                 Небольшая мастерская по ремонту электроинструмента и
                 бензотехники. Мы бережно восстанавливаем, реанимируем все
                 возможные виды инструментов: от недорогих бытовых до
                 профессиональных моделей.
               </div>
-              <div className="block">Пустота</div>
+              <div className="block" />
             </SplitterLayout>
             <div className="block header">
               8 (8172)
@@ -51,10 +56,15 @@ const Splitter = () => (
         </SplitterLayout>
       </SplitterLayout>
 
-      <SplitterLayout vertical secondaryInitialSize={300} primaryIndex={1}>
-        <SplitterLayout>
+      <SplitterLayout
+        percentage
+        vertical
+        secondaryInitialSize={25}
+        primaryIndex={1}
+      >
+        <SplitterLayout percentage primaryIndex={1}>
           <img src={tester} className="img" alt="тестер" />
-          <SplitterLayout secondaryInitialSize={200}>
+          <SplitterLayout percentage secondaryInitialSize={40}>
             <div className="block">
               Небольшая мастерская по ремонту электроинструмента и бензотехники.
               Мы бережно восстанавливаем, реанимируем все возможные виды
@@ -63,27 +73,32 @@ const Splitter = () => (
               инструментов: от недорогих бытовых до профессиональных моделей.
               Небольшая мастерская по ремонту электроинструмента и бензотехники.
             </div>
-            <div className="block">пустота</div>
+            <div className="block" />
           </SplitterLayout>
         </SplitterLayout>
 
-        <SplitterLayout vertical secondaryInitialSize={150} primaryIndex={1}>
-          <div className="block header feedback">
-            отзывы отзывы отзывы отзывы отзывы отзывы
+        <SplitterLayout
+          percentage
+          vertical
+          secondaryInitialSize={13}
+          primaryIndex={1}
+        >
+          <div className="block">
+            <Feedback />
           </div>
 
-          <SplitterLayout vertical secondaryInitialSize={400}>
-            <SplitterLayout secondaryInitialSize={500}>
-              <SplitterLayout vertical secondaryInitialSize={150}>
-                <SplitterLayout secondaryInitialSize={400}>
-                  <div className="block">пустота</div>
+          <SplitterLayout percentage vertical secondaryInitialSize={33}>
+            <SplitterLayout percentage secondaryInitialSize={37}>
+              <SplitterLayout percentage vertical secondaryInitialSize={36}>
+                <SplitterLayout percentage secondaryInitialSize={65}>
+                  <div className="block" />
                   <img src={master} className="img" alt="мастер" />
                 </SplitterLayout>
 
-                <div className="block">пустота</div>
+                <div className="block" />
               </SplitterLayout>
 
-              <SplitterLayout vertical secondaryInitialSize={250}>
+              <SplitterLayout percentage vertical secondaryInitialSize={36}>
                 <div className="block header">
                   UDARNIK35
                   <br />
@@ -95,12 +110,16 @@ const Splitter = () => (
               </SplitterLayout>
             </SplitterLayout>
 
-            <SplitterLayout secondaryInitialSize={1000}>
-              <div className="block">пустота</div>
+            <SplitterLayout percentage secondaryInitialSize={70}>
+              <div className="block" />
 
-              <SplitterLayout secondaryInitialSize={400} primaryIndex={1}>
+              <SplitterLayout
+                percentage
+                secondaryInitialSize={70}
+                primaryIndex={1}
+              >
                 <img src={motors} className="img" alt="запчасти" />
-                <div className="block">пустота</div>
+                <div className="block" />
               </SplitterLayout>
             </SplitterLayout>
           </SplitterLayout>
