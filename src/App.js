@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
-import Splitter from "./features/splitter";
+import Landing from "./features/landing";
 
 const App = () => (
   <div className="App">
-    <Splitter />
+    <Landing />
   </div>
 );
 

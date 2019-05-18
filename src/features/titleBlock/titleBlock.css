@@ -1,0 +1,18 @@
+.title {
+  font-size: 4.5vw;
+  line-height: 95%;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.leftspace {
+  padding-left: 0.6em;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 115%;
+  letter-spacing: -0.01em;
+  padding-left: 35%;
+  max-width: 330px;
+}

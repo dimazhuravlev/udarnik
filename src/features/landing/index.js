@@ -1,5 +1,5 @@
 import React from "react";
-import "./splitter.css";
+import "./landing.css";
 import SplitterLayout from "react-splitter-layout";
 import "react-splitter-layout/lib/index.css";
 import drill from "./drill.jpg";
@@ -8,13 +8,17 @@ import master from "./master.jpg";
 import grinder from "./grinder.jpg";
 import motors from "./motors.jpg";
 import Feedback from "../feedback";
+import TitleBlock from "../titleBlock";
+import Phone from "../phone";
 
-const Splitter = () => (
+const Landing = () => (
   <div className="wrapper">
     <SplitterLayout percentage vertical secondaryInitialSize={67}>
       <SplitterLayout percentage secondaryInitialSize={60}>
         <SplitterLayout percentage vertical secondaryInitialSize={57}>
-          <div className="block header">РЕМОНТИРУЕМ ИНСТРУМЕНТЫ И ТЕХНИКУ</div>
+          <div className="block">
+            <TitleBlock />
+          </div>
           <SplitterLayout percentage vertical secondaryInitialSize={40}>
             <div className="block">Карта</div>
             <div className="block">
@@ -47,9 +51,7 @@ const Splitter = () => (
               <div className="block" />
             </SplitterLayout>
             <div className="block header">
-              8 (8172)
-              <br />
-              346-12-07
+              <Phone />
             </div>
           </SplitterLayout>
           <img src={drill} className="img" alt="дрель" />
@@ -129,4 +131,4 @@ const Splitter = () => (
   </div>
 );
 
-export default Splitter;
+export default Landing;

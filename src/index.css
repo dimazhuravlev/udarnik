@@ -1,11 +1,37 @@
+@font-face {
+  font-family: "Favorit";
+  src: url("./font/FavoritTrialPro-Book.woff") format("woff");
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Favorit", -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
   background-color: black;
   padding: 2px;
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  outline: none;
+  color: #000000;
+}
+
+::selection {
+  /* color: var(--light); */
+  background-color: rgba(191, 183, 163, 0.3);
 }
