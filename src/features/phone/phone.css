@@ -1,4 +1,5 @@
 .title {
+  display: inline-block;
   font-size: 4.5vw;
   line-height: 95%;
   letter-spacing: -0.03em;
