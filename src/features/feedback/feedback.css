@@ -13,6 +13,7 @@
   font-size: 4.5vw;
   line-height: 95%;
   letter-spacing: -0.03em;
+  margin-top: 12px;
   text-transform: uppercase;
   animation: move 27s linear;
 }

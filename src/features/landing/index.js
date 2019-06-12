@@ -21,7 +21,7 @@ class Landing extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        <SplitterLayout percentage vertical secondaryInitialSize={56}>
+        <SplitterLayout percentage vertical secondaryInitialSize={63}>
           <SplitterLayout percentage secondaryInitialSize={60}>
             <SplitterLayout percentage vertical secondaryInitialSize={57}>
               <TitleBlock />
@@ -48,9 +48,7 @@ class Landing extends React.Component {
                   </div>
                   <div className="block" />
                 </SplitterLayout>
-                <div className="block header">
-                  <Phone />
-                </div>
+                <Phone />
               </SplitterLayout>
               <img src={drill} className="img" alt="дрель" />
             </SplitterLayout>
@@ -66,13 +64,19 @@ class Landing extends React.Component {
               <img src={tester} className="img" alt="тестер" />
               <SplitterLayout percentage secondaryInitialSize={40}>
                 <div className="block">
-                  Небольшая мастерская по ремонту электроинструмента и
-                  бензотехники. Мы бережно восстанавливаем, реанимируем все
-                  возможные виды инструментов: от недорогих бытовых до
-                  профессиональных моделей. Мы бережно восстанавливаем,
-                  реанимируем все возможные виды инструментов: от недорогих
-                  бытовых до профессиональных моделей. Небольшая мастерская по
-                  ремонту электроинструмента и бензотехники.
+                  Понедельник-пятница:
+                  <br />
+                  09:00 – 18:00
+                  <br />
+                  <br />
+                  Суббота:
+                  <br />
+                  10:00 – 16:00
+                  <br />
+                  <br />
+                  Воскресенье:
+                  <br />
+                  выходной
                 </div>
                 <div className="block" />
               </SplitterLayout>
@@ -85,9 +89,9 @@ class Landing extends React.Component {
               primaryIndex={1}
             >
               <Feedback />
-              <SplitterLayout percentage vertical secondaryInitialSize={33}>
+              <SplitterLayout percentage vertical secondaryInitialSize={36}>
                 <SplitterLayout percentage secondaryInitialSize={37}>
-                  <SplitterLayout percentage vertical secondaryInitialSize={36}>
+                  <SplitterLayout percentage vertical secondaryInitialSize={26}>
                     <SplitterLayout percentage secondaryInitialSize={65}>
                       <div className="block" />
                       <img src={master} className="img" alt="мастер" />
@@ -96,8 +100,8 @@ class Landing extends React.Component {
                     <div className="block" />
                   </SplitterLayout>
 
-                  <SplitterLayout percentage vertical secondaryInitialSize={36}>
-                    <div className="block header">
+                  <SplitterLayout percentage vertical secondaryInitialSize={66}>
+                    <div className="block header title">
                       UDARNIK35
                       <br />
                       @YANDEX

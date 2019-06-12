@@ -10,8 +10,10 @@ class TitleBlock extends React.Component {
     return (
       <div className="titleBlock" onClick={this.handleClick}>
         <p className="title">Ремонтируем</p>
-        <p className="title leftspace">инструмент</p>
-        <p className="title">технику</p>
+        <br />
+        <p className="title leftspace">инструмент </p>
+        <br />
+        <p className="title"> технику</p>
         <p className="text">
           Ударник — это небольшая мастерская в Вологде. Мы ремонтируем
           электроинструмент и бензотехники. Бережно восстанавливаем, реанимируем

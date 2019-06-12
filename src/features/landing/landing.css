@@ -33,8 +33,14 @@
 }
 
 .wrapper {
-  height: 3680px;
+  height: 2700px;
   position: relative;
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    height: 1600px;
+  }
 }
 
 .header {
