@@ -1,7 +1,5 @@
 import React from "react";
 import "./landing.css";
-import SplitterLayout from "react-splitter-layout";
-import "react-splitter-layout/lib/index.css";
 import drill from "./drill.jpg";
 import tester from "./tester.jpg";
 import master from "./master.jpg";
@@ -12,33 +10,92 @@ import Feedback from "../feedback";
 import TitleBlock from "../titleBlock";
 import Phone from "../phone";
 import Address from "../address";
+import SplitPane from "react-split-pane";
 
 class Landing extends React.Component {
   randomNumber() {
-    return 20 + Math.floor(Math.random() * (80 + 1 - 20));
+    // return 20 + Math.floor(Math.random() * (80 + 1 - 20));
+    return 20;
   }
 
   render() {
     return (
       <div className="wrapper">
-        <SplitterLayout percentage vertical secondaryInitialSize={63}>
-          <SplitterLayout percentage secondaryInitialSize={60}>
-            <SplitterLayout percentage vertical secondaryInitialSize={57}>
+        <SplitPane
+          split="horizontal"
+          defaultSize="37%"
+          resizerStyle={{
+            backgroundColor: "black",
+            height: "2px",
+            cursor: "row-resize",
+            zIndex: 1
+          }}
+        >
+          <SplitPane
+            defaultSize="40%"
+            resizerStyle={{
+              backgroundColor: "black",
+              width: "2px",
+              cursor: "col-resize",
+              zIndex: 1
+            }}
+          >
+            <SplitPane
+              split="horizontal"
+              defaultSize="43%"
+              resizerStyle={{
+                backgroundColor: "black",
+                height: "2px",
+                cursor: "row-resize",
+                zIndex: 1
+              }}
+            >
               <TitleBlock />
-              <SplitterLayout percentage vertical secondaryInitialSize={40}>
+              <SplitPane
+                split="horizontal"
+                defaultSize="60%"
+                resizerStyle={{
+                  backgroundColor: "black",
+                  height: "2px",
+                  cursor: "row-resize",
+                  zIndex: 1
+                }}
+              >
                 <img src={map} className="img" alt="карта" />
                 <div className="block">
                   <Address />
                 </div>
-              </SplitterLayout>
-            </SplitterLayout>
+              </SplitPane>
+            </SplitPane>
 
-            <SplitterLayout percentage vertical secondaryInitialSize={57}>
-              <SplitterLayout percentage vertical secondaryInitialSize={50}>
-                <SplitterLayout
-                  percentage
-                  secondaryInitialSize={43}
-                  primaryIndex={1}
+            <SplitPane
+              split="horizontal"
+              defaultSize="43%"
+              resizerStyle={{
+                backgroundColor: "black",
+                height: "2px",
+                cursor: "row-resize",
+                zIndex: 1
+              }}
+            >
+              <SplitPane
+                split="horizontal"
+                defaultSize="50%"
+                resizerStyle={{
+                  backgroundColor: "black",
+                  height: "2px",
+                  cursor: "row-resize",
+                  zIndex: 1
+                }}
+              >
+                <SplitPane
+                  defaultSize="43%"
+                  resizerStyle={{
+                    backgroundColor: "black",
+                    width: "2px",
+                    cursor: "col-resize",
+                    zIndex: 1
+                  }}
                 >
                   <div className="block">
                     Небольшая мастерская по ремонту электроинструмента и
@@ -47,22 +104,42 @@ class Landing extends React.Component {
                     профессиональных моделей.
                   </div>
                   <div className="block" />
-                </SplitterLayout>
+                </SplitPane>
                 <Phone />
-              </SplitterLayout>
+              </SplitPane>
               <img src={drill} className="img" alt="дрель" />
-            </SplitterLayout>
-          </SplitterLayout>
+            </SplitPane>
+          </SplitPane>
 
-          <SplitterLayout
-            percentage
-            vertical
-            secondaryInitialSize={25}
-            primaryIndex={1}
+          <SplitPane
+            split="horizontal"
+            defaultSize="25%"
+            resizerStyle={{
+              backgroundColor: "black",
+              height: "2px",
+              cursor: "row-resize",
+              zIndex: 1
+            }}
           >
-            <SplitterLayout percentage primaryIndex={1}>
+            <SplitPane
+              defaultSize="50%"
+              resizerStyle={{
+                backgroundColor: "black",
+                width: "2px",
+                cursor: "col-resize",
+                zIndex: 1
+              }}
+            >
               <img src={tester} className="img" alt="тестер" />
-              <SplitterLayout percentage secondaryInitialSize={40}>
+              <SplitPane
+                defaultSize="60%"
+                resizerStyle={{
+                  backgroundColor: "black",
+                  width: "2px",
+                  cursor: "col-resize",
+                  zIndex: 1
+                }}
+              >
                 <div className="block">
                   Понедельник-пятница:
                   <br />
@@ -79,28 +156,75 @@ class Landing extends React.Component {
                   выходной
                 </div>
                 <div className="block" />
-              </SplitterLayout>
-            </SplitterLayout>
+              </SplitPane>
+            </SplitPane>
 
-            <SplitterLayout
-              percentage
-              vertical
-              secondaryInitialSize={13}
-              primaryIndex={1}
+            <SplitPane
+              split="horizontal"
+              defaultSize="13%"
+              resizerStyle={{
+                backgroundColor: "black",
+                height: "2px",
+                cursor: "row-resize",
+                zIndex: 1
+              }}
             >
               <Feedback />
-              <SplitterLayout percentage vertical secondaryInitialSize={36}>
-                <SplitterLayout percentage secondaryInitialSize={37}>
-                  <SplitterLayout percentage vertical secondaryInitialSize={26}>
-                    <SplitterLayout percentage secondaryInitialSize={65}>
+              <SplitPane
+                split="horizontal"
+                defaultSize="63%"
+                resizerStyle={{
+                  backgroundColor: "black",
+                  height: "2px",
+                  cursor: "row-resize",
+                  zIndex: 1
+                }}
+              >
+                <SplitPane
+                  defaultSize="63%"
+                  resizerStyle={{
+                    backgroundColor: "black",
+                    width: "2px",
+                    cursor: "col-resize",
+                    zIndex: 1
+                  }}
+                >
+                  <SplitPane
+                    split="horizontal"
+                    defaultSize="74%"
+                    resizerStyle={{
+                      backgroundColor: "black",
+                      height: "2px",
+                      cursor: "row-resize",
+                      zIndex: 1
+                    }}
+                  >
+                    <SplitPane
+                      defaultSize="35%"
+                      resizerStyle={{
+                        backgroundColor: "black",
+                        width: "2px",
+                        cursor: "col-resize",
+                        zIndex: 1
+                      }}
+                    >
                       <div className="block" />
                       <img src={master} className="img" alt="мастер" />
-                    </SplitterLayout>
+                    </SplitPane>
 
                     <div className="block" />
-                  </SplitterLayout>
+                  </SplitPane>
 
-                  <SplitterLayout percentage vertical secondaryInitialSize={66}>
+                  <SplitPane
+                    split="horizontal"
+                    defaultSize="34%"
+                    resizerStyle={{
+                      backgroundColor: "black",
+                      height: "2px",
+                      cursor: "row-resize",
+                      zIndex: 1
+                    }}
+                  >
                     <div className="block header title">
                       UDARNIK35
                       <br />
@@ -109,25 +233,37 @@ class Landing extends React.Component {
                       .RU
                     </div>
                     <img src={grinder} className="img" alt="ротор" />
-                  </SplitterLayout>
-                </SplitterLayout>
+                  </SplitPane>
+                </SplitPane>
 
-                <SplitterLayout percentage secondaryInitialSize={70}>
+                <SplitPane
+                  defaultSize="30%"
+                  resizerStyle={{
+                    backgroundColor: "black",
+                    width: "2px",
+                    cursor: "col-resize",
+                    zIndex: 1
+                  }}
+                >
                   <div className="block" />
 
-                  <SplitterLayout
-                    percentage
-                    secondaryInitialSize={70}
-                    primaryIndex={1}
+                  <SplitPane
+                    defaultSize="70%"
+                    resizerStyle={{
+                      backgroundColor: "black",
+                      width: "2px",
+                      cursor: "col-resize",
+                      zIndex: 1
+                    }}
                   >
                     <img src={motors} className="img" alt="запчасти" />
                     <div className="block" />
-                  </SplitterLayout>
-                </SplitterLayout>
-              </SplitterLayout>
-            </SplitterLayout>
-          </SplitterLayout>
-        </SplitterLayout>
+                  </SplitPane>
+                </SplitPane>
+              </SplitPane>
+            </SplitPane>
+          </SplitPane>
+        </SplitPane>
       </div>
     );
   }
