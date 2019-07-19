@@ -1,26 +1,23 @@
 import React from "react";
-import "./landing.css";
-import drill from "./drill.jpg";
-import tester from "./tester.jpg";
-import master from "./master.jpg";
-import grinder from "./grinder.jpg";
-import map from "./map.jpg";
-import motors from "./motors.jpg";
+import styles from "./landing.module.css";
+import drill from "./../../img/drill.jpg";
+import tester from "./../../img/tester.jpg";
+import master from "./../../img/master.jpg";
+import grinder from "./../../img/grinder.jpg";
+import map from "./../../img/map.jpg";
+import motors from "./../../img/motors.jpg";
 import Feedback from "../feedback";
 import TitleBlock from "../titleBlock";
 import Phone from "../phone";
 import Address from "../address";
 import SplitPane from "react-split-pane";
+import Email from "../email";
+import "./splitterStyles.css?CSSModulesDisable";
 
 class Landing extends React.Component {
-  randomNumber() {
-    // return 20 + Math.floor(Math.random() * (80 + 1 - 20));
-    return 20;
-  }
-
   render() {
     return (
-      <div className="wrapper">
+      <div className={styles.wrapper}>
         <SplitPane
           split="horizontal"
           defaultSize="37%"
@@ -61,8 +58,8 @@ class Landing extends React.Component {
                   zIndex: 1
                 }}
               >
-                <img src={map} className="img" alt="карта" />
-                <div className="block">
+                <img src={map} className={styles.img} alt="карта" />
+                <div className={styles.block}>
                   <Address />
                 </div>
               </SplitPane>
@@ -97,17 +94,17 @@ class Landing extends React.Component {
                     zIndex: 1
                   }}
                 >
-                  <div className="block">
+                  <div className={styles.block}>
                     Небольшая мастерская по ремонту электроинструмента и
                     бензотехники. Мы бережно восстанавливаем, реанимируем все
                     возможные виды инструментов: от недорогих бытовых до
                     профессиональных моделей.
                   </div>
-                  <div className="block" />
+                  <div className={styles.block} />
                 </SplitPane>
                 <Phone />
               </SplitPane>
-              <img src={drill} className="img" alt="дрель" />
+              <img src={drill} className={styles.img} alt="дрель" />
             </SplitPane>
           </SplitPane>
 
@@ -130,7 +127,7 @@ class Landing extends React.Component {
                 zIndex: 1
               }}
             >
-              <img src={tester} className="img" alt="тестер" />
+              <img src={tester} className={styles.img} alt="тестер" />
               <SplitPane
                 defaultSize="60%"
                 resizerStyle={{
@@ -140,7 +137,7 @@ class Landing extends React.Component {
                   zIndex: 1
                 }}
               >
-                <div className="block">
+                <div className={styles.block}>
                   Понедельник-пятница:
                   <br />
                   09:00 – 18:00
@@ -155,7 +152,7 @@ class Landing extends React.Component {
                   <br />
                   выходной
                 </div>
-                <div className="block" />
+                <div className={styles.block} />
               </SplitPane>
             </SplitPane>
 
@@ -208,11 +205,11 @@ class Landing extends React.Component {
                         zIndex: 1
                       }}
                     >
-                      <div className="block" />
-                      <img src={master} className="img" alt="мастер" />
+                      <div className={styles.block} />
+                      <img src={master} className={styles.img} alt="мастер" />
                     </SplitPane>
 
-                    <div className="block" />
+                    <div className={styles.block} />
                   </SplitPane>
 
                   <SplitPane
@@ -225,14 +222,8 @@ class Landing extends React.Component {
                       zIndex: 1
                     }}
                   >
-                    <div className="block header title">
-                      UDARNIK35
-                      <br />
-                      @YANDEX
-                      <br />
-                      .RU
-                    </div>
-                    <img src={grinder} className="img" alt="ротор" />
+                    <Email />
+                    <img src={grinder} className={styles.img} alt="ротор" />
                   </SplitPane>
                 </SplitPane>
 
@@ -245,7 +236,7 @@ class Landing extends React.Component {
                     zIndex: 1
                   }}
                 >
-                  <div className="block" />
+                  <div className={styles.block} />
 
                   <SplitPane
                     defaultSize="70%"
@@ -256,8 +247,8 @@ class Landing extends React.Component {
                       zIndex: 1
                     }}
                   >
-                    <img src={motors} className="img" alt="запчасти" />
-                    <div className="block" />
+                    <img src={motors} className={styles.img} alt="запчасти" />
+                    <div className={styles.block} />
                   </SplitPane>
                 </SplitPane>
               </SplitPane>

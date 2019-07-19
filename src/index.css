@@ -32,6 +32,9 @@ a {
 }
 
 ::selection {
-  /* color: var(--light); */
   background-color: rgba(191, 183, 163, 0.3);
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
