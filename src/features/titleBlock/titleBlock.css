@@ -8,6 +8,12 @@
   overflow: scroll;
 }
 
+@media (max-width: 600px) {
+  .titleBlock {
+    border-radius: 18px;
+  }
+}
+
 .title {
   font-size: 4.5vw;
   line-height: 95%;

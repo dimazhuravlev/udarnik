@@ -1,16 +1,7 @@
 .wrapper {
   height: 2700px;
   position: relative;
-  @media (max-width: 600px) {
-    height: 1600px;
-  }
 }
-
-/* @media (max-width: 600px) {
-  .wrapper {
-    height: 1600px;
-  }
-} */
 
 .block {
   padding: 1.8vw;
@@ -33,4 +24,25 @@
   user-select: none;
   -webkit-user-select: none;
   overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    height: 1600px;
+  }
+  .block {
+    border-radius: 18px;
+  }
+  .img {
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .displayNone {
+    display: none;
+  }
+  .widthFull {
+    width: 100%;
+  }
 }

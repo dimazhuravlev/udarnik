@@ -11,8 +11,25 @@
   line-height: 95%;
   letter-spacing: -0.03em;
   text-transform: uppercase;
+  transition: background-color 0.1s ease, color 0.2s ease;
+}
+
+.email:hover {
+  background-color: black;
+  transition: background-color 0.1s ease;
+}
+
+.email:hover .link {
+  color: #fbf6e9;
+  transition: color 0.2s ease;
 }
 
 .leftspace {
   padding-left: 0.6em;
+}
+
+@media (max-width: 600px) {
+  .email {
+    border-radius: 18px;
+  }
 }

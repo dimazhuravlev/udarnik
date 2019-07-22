@@ -1,11 +1,5 @@
 import React from "react";
 import styles from "./landing.module.css";
-import drill from "./../../img/drill.jpg";
-import tester from "./../../img/tester.jpg";
-import master from "./../../img/master.jpg";
-import grinder from "./../../img/grinder.jpg";
-import map from "./../../img/map.jpg";
-import motors from "./../../img/motors.jpg";
 import Feedback from "../feedback";
 import TitleBlock from "../titleBlock";
 import Phone from "../phone";
@@ -58,7 +52,7 @@ class Landing extends React.Component {
                   zIndex: 1
                 }}
               >
-                <img src={map} className={styles.img} alt="карта" />
+                <img src="/img/map.jpg" className={styles.img} alt="карта" />
                 <div className={styles.block}>
                   <Address />
                 </div>
@@ -104,7 +98,7 @@ class Landing extends React.Component {
                 </SplitPane>
                 <Phone />
               </SplitPane>
-              <img src={drill} className={styles.img} alt="дрель" />
+              <img src="/img/drill.jpg" className={styles.img} alt="дрель" />
             </SplitPane>
           </SplitPane>
 
@@ -127,7 +121,7 @@ class Landing extends React.Component {
                 zIndex: 1
               }}
             >
-              <img src={tester} className={styles.img} alt="тестер" />
+              <img src="img/tester.jpg" className={styles.img} alt="тестер" />
               <SplitPane
                 defaultSize="60%"
                 resizerStyle={{
@@ -158,7 +152,7 @@ class Landing extends React.Component {
 
             <SplitPane
               split="horizontal"
-              defaultSize="13%"
+              defaultSize="17%"
               resizerStyle={{
                 backgroundColor: "black",
                 height: "2px",
@@ -206,7 +200,11 @@ class Landing extends React.Component {
                       }}
                     >
                       <div className={styles.block} />
-                      <img src={master} className={styles.img} alt="мастер" />
+                      <img
+                        src="/img/details.jpg"
+                        className={styles.img}
+                        alt="details"
+                      />
                     </SplitPane>
 
                     <div className={styles.block} />
@@ -214,7 +212,7 @@ class Landing extends React.Component {
 
                   <SplitPane
                     split="horizontal"
-                    defaultSize="34%"
+                    defaultSize="35%"
                     resizerStyle={{
                       backgroundColor: "black",
                       height: "2px",
@@ -223,7 +221,11 @@ class Landing extends React.Component {
                     }}
                   >
                     <Email />
-                    <img src={grinder} className={styles.img} alt="ротор" />
+                    <img
+                      src="/img/grinder.jpg"
+                      className={styles.img}
+                      alt="ротор"
+                    />
                   </SplitPane>
                 </SplitPane>
 
@@ -247,7 +249,11 @@ class Landing extends React.Component {
                       zIndex: 1
                     }}
                   >
-                    <img src={motors} className={styles.img} alt="запчасти" />
+                    <img
+                      src="/img/motors.jpg"
+                      className={styles.img}
+                      alt="запчасти"
+                    />
                     <div className={styles.block} />
                   </SplitPane>
                 </SplitPane>
